@@ -1,0 +1,141 @@
+body {
+    background-image: linear-gradient(#9667e0 40%, #d4bbfc, #ebd9fc, #f2ebfb, #fbfaff);
+    width: 100%;
+}
+
+#header {
+    text-decoration: none;
+    color: #d4bbfc;
+    font-family: 'Fuzzy Bubbles', cursive;
+}
+
+#header > .img-fluid {
+    filter: drop-shadow(5px 5px 10px #d4bbfc);
+}
+
+nav {
+    background-image: linear-gradient(to right, #9667e0 40%, #d4bbfc, #ebd9fc, #f2ebfb);
+    font-family: 'Fuzzy Bubbles', cursive;
+}
+
+#logo {
+    font-size: 20px;
+    text-shadow: 2px 2px 5px #d4bbfc;
+}
+
+#toggler {
+    background-color: #d4bbfc;
+    color: #9667e0;
+    box-shadow: 3px 3px 5px #9667e0;
+    margin: 2% 0 !important;
+    height: 50px;
+    width: 60px;
+}
+
+.nav-link {
+    text-align: center;
+    margin-right: 10px;
+    color: #9667e0;
+    text-shadow: 2px 2px 3px #d4bbfc;
+}
+
+.nav-link:hover {
+    background-color: #9667e0;
+    color: #d4bbfc;
+}
+
+#heading {
+    width: 90%;
+    background-color: #ebd9fc;
+    color: #9667e0;
+    font-family: 'Caveat Brush', cursive;
+    border: #ebd9fc 3px solid;
+    margin-bottom: 50px;
+    margin-top: 25px;
+}
+
+main > div.row {
+    justify-content: space-evenly;
+}
+
+div.col-3 {
+    background-color: #d4bbfc;
+    padding: 15px;
+}
+
+div.card-body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    background-color: #9667e0;
+}
+
+h5.card-title {
+    font-family: 'Caveat Brush', cursive;
+    font-size: 25px;
+    color: #ebd9fc;
+}
+
+p.card-text {
+    font-family: 'Lato', sans-serif;
+    color: #ebd9fc;
+}
+
+a.btn-primary {
+    background-color: #d4bbfc;
+    color: #9667e0;
+}
+
+footer > #footer {
+    background-color: #9667e0;
+    color: #ebd9fc;
+    font-family: 'Fuzzy Bubbles', cursive;
+    height: 65px;
+}
+
+#social {
+    padding-left: 10px;
+    font-size: 30px;
+}
+
+@media only screen and (max-width:769px) {
+    #header {
+        width: 50%;
+    }
+
+    #toggler {
+        margin: 0 0;
+    }
+
+    main > div.row {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-content: center;
+    }
+
+    div.col-3 {
+        width: 80%;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+
+    #footer {
+        font-size: 15px;
+        padding-top: 10px;
+    }
+}
+
+@media only screen and (max-width:426px) {
+    #header {
+        width: 50%;
+    }
+
+    #logo {
+        font-size: 15px !important;
+    }
+
+    #footer {
+        font-size: 12px !important;
+    }
+}
