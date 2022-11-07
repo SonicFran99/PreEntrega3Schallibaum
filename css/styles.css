@@ -1,0 +1,26 @@
+body {
+  background-image: linear-gradient(#9667e0, #d4bbfc, #ebd9fc, #f2ebfb, #fbfaff); }
+
+nav {
+  background-image: linear-gradient(to right, #9667e0, #d4bbfc, #ebd9fc);
+  font-family: "Fuzzy Bubbles", cursive; }
+  nav a {
+    text-decoration: none;
+    color: #d4bbfc;
+    text-shadow: 2px 2px 3px #d4bbfc;
+    text-align: center;
+    font-size: calc(10px + 1vw);
+    margin-right: 10px; }
+  nav a:hover {
+    text-decoration: none;
+    color: #d4bbfc;
+    text-shadow: 2px 2px 3px #d4bbfc;
+    text-align: center; }
+  nav .nav-link {
+    text-decoration: none;
+    color: #9667e0;
+    text-shadow: 2px 2px 3px #d4bbfc;
+    text-align: center; }
+  nav .nav-link:hover {
+    background-color: #9667e0;
+    color: #d4bbfc; }

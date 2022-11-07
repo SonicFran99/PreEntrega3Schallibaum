@@ -1,0 +1,11 @@
+@mixin estilos_link ($decoracion, $color, $text-shadow, $text-align) {
+  text-decoration: $decoracion;
+  color: $color;
+  text-shadow: $text-shadow;
+  text-align: $text-align;
+}
+
+@mixin link_hover ($bg-color, $color) {
+  background-color: $bg-color;
+  color: $color;
+}

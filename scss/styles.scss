@@ -1,0 +1,26 @@
+@import "variables/variables";
+@import "componentes/contenedores";
+
+body {
+  background-image: linear-gradient($lista_colores1);
+}
+
+nav {
+  background-image: linear-gradient(to right, $lista_colores2);
+  font-family: $fuente_encabezados;
+  a {
+    @include estilos_link(none, #d4bbfc, 2px 2px 3px #d4bbfc, center);
+    font-size: calc(10px + 1vw);
+    margin-right: 10px;
+  }
+  a:hover {
+    @include estilos_link(none, #d4bbfc, 2px 2px 3px #d4bbfc, center)
+  }
+  .nav-link{
+    @include estilos_link(none, #9667e0, 2px 2px 3px #d4bbfc, center);
+  }
+  .nav-link:hover {
+    @include link_hover(#9667e0, #d4bbfc);
+  }
+}
+
