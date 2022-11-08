@@ -2,25 +2,220 @@
 @import "componentes/contenedores";
 
 body {
-  background-image: linear-gradient($lista_colores1);
+  background-image: $linear_gradient1;
 }
 
 nav {
-  background-image: linear-gradient(to right, $lista_colores2);
+  background-image: $linear_gradient2;
   font-family: $fuente_encabezados;
-  a {
-    @include estilos_link(none, #d4bbfc, 2px 2px 3px #d4bbfc, center);
-    font-size: calc(10px + 1vw);
+  #header {
+    @include estilos_link(none, transparent, #f2ebfb, 2px 2px 3px #d4bbfc, center, calc(5px + 1vw));
     margin-right: 10px;
-  }
-  a:hover {
-    @include estilos_link(none, #d4bbfc, 2px 2px 3px #d4bbfc, center)
+    &:hover {
+      @include estilos_link(none, transparent, #d4bbfc, 2px 2px 3px #d4bbfc, center, calc(5px + 1vw))
+    }
+    .img-fluid {
+      filter: drop-shadow(5px 5px 10px #d4bbfc);
+    }
   }
   .nav-link{
-    @include estilos_link(none, #9667e0, 2px 2px 3px #d4bbfc, center);
-  }
-  .nav-link:hover {
-    @include link_hover(#9667e0, #d4bbfc);
+    @include estilos_link(none, transparent,#9667e0, 2px 2px 3px #d4bbfc, center, calc(10px + 1vw));
+    margin-right: 10px;
+    &:hover {
+      @include link_hover(#9667e0, #ebd9fc);
+    }
   }
 }
 
+main {
+  #whatsapp {
+    @include whatsapp (fixed, 2%, 20%, lightgreen, 1000, 20px, $fuente_titulos);
+    padding: 8px;
+      #whatsapp-link {
+      text-decoration: none;
+      color: white;
+      }
+      #whatsapp-text {
+        font-size: 1.5vw;
+      }
+      .bi-whatsapp {
+        font-size: 40px;
+      }
+      &:hover {
+        background-color: rgb(70, 179, 70);
+      }
+  }
+  #vision {
+    @include estilo_encabezados (90%, #ebd9fc, #9667e0, $fuente_titulos, #ebd9fc 3px solid);
+  }
+  #mobile-description {
+    display: none;
+  } 
+  #classes-h1 {
+    @include estilo_encabezados (90%, #d4bbfc, #9667e0, $fuente_titulos, #d4bbfc 3px solid);
+  }
+  hr {
+    @include hr_style;
+  }
+  #hr-2 {
+    @include hr_style_2;
+  }
+  #testimonies {
+    @include estilo_encabezados (90%, #9667e0, #d4bbfc, $fuente_titulos, #9667e0 3px solid);
+  }
+  #testimonies-2 {
+    @include estilo_encabezados (90%, #d4bbfc, #9667e0, $fuente_titulos, #9667e0 3px solid);
+  }
+  #heading {
+    @include estilo_encabezados (90%, #ebd9fc, #9667e0, $fuente_titulos, #ebd9fc 3px solid);
+  }
+  #carousel-inner {
+    @include carousel (80%, #d4bbfc, white, 5px 5px 5px black);
+    .carousel-caption {
+      font-family: $fuente_titulos;
+      h5 {
+        font-weight: bold;
+        font-size: 30px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+  div.row {
+    @include estilo_padre (flex, row nowrap, space-evenly);
+    .col-3 {
+      @include div_style_1 (justify, #9667e0, #ebd9fc);
+      h2 {
+        font-family: $fuente_titulos;
+      }
+      p {
+        font-family: $fuente_contenido;
+        font-size: 15px;
+      }
+      button {
+        @include estilo_boton (100%, #d4bbfc, #9667e0, 1px #f2ebfb solid);
+        a {
+          text-decoration: none;
+          color: #9667e0;
+          &:hover{
+            @include link_hover (#f2ebfb, #d4bbfc);
+            display: block;
+          }
+        }
+        &:hover {
+          @include link_hover (#f2ebfb, #d4bbfc);
+        }
+      }
+    }
+  }
+  #test {
+    @include div_style_2 (#9667e0, 15px, 15px 0, #ebd9fc, 90%, auto);
+    .img-fluid {
+      max-width: 20%;
+    }
+    #test-text {
+      border-left: #ebd9fc 3px solid;
+      margin-left: 10px;
+      h1 {
+        font-family: $fuente_titulos;
+      }
+      p {
+        font-family: $fuente_contenido;
+        font-size: large;
+      }
+    }
+    #test-text-2 {
+      border-right: #ebd9fc 3px solid;
+      margin-right: 10px;
+      h1 {
+        font-family: $fuente_titulos;
+      }
+      p {
+        font-family: $fuente_contenido;
+        font-size: large;
+      }
+    }
+  }
+  #test-button {
+    @include estilo_boton (90%, #9667e0, #ebd9fc, #f2ebfb 3px solid);
+    &:hover{
+      @include link_hover (#d4bbfc, #9667e0);
+    }
+    #button-link {
+      display: block;
+      text-decoration: none;
+      color: #ebd9fc;
+      &:hover {
+        color: #9667e0;
+      }
+    }
+  }
+  div.card {
+    @include card_style (flex, column nowrap, center, #ebd9fc, #9667e0, #f2ebfb 3px solid);
+    h5 {
+      font-family: $fuente_titulos;
+      font-size: calc(10px + 1vw);
+    }
+    p {
+      font-family: $fuente_contenido;
+      font-size: calc(5px + 1vw);
+    }
+    a {
+      @include estilo_boton (100%, #9667e0, #ebd9fc, #ebd9fc 1px solids);
+      text-decoration: none;
+      &:hover {
+        @include link_hover (#f2ebfb, #9667e0);
+      }
+    }
+  }
+  form.row {
+    @include form_style (#9667e0, #ebd9fc 3px solid, 3%);
+    legend {
+      font-family: $fuente_titulos;
+      color: #d4bbfc;
+      font-size: calc(25px + 1vw);
+    }
+    input.form-control {
+      @include input_style (#d4bbfc, #f2ebfb, $fuente_contenido, start, auto);
+    }
+    select.form-select {
+      @include input_style (#d4bbfc, gray, $fuente_contenido, start, auto);
+    }
+    h3 {
+      font-family: $fuente_contenido;
+      color: #d4bbfc;
+      font-size: calc(15x + 1vw);
+      font-weight: bold;
+    }
+    div.form-check {
+      @include input_style (#9667e0, #d4bbfc, $fuente_contenido, center, auto);
+    }
+    textarea.form-control {
+      @include input_style (#d4bbfc, #9667e0, $fuente_contenido, center, calc(150px + 1vh));
+    }
+    label.form-label {
+      color: #9667e0;
+    }
+    .btn {
+      background-color: #d4bbfc;
+      color: #9667e0;
+    }
+    .btn[type="submit"]:hover {
+      background-color: green !important;
+      color: #f2ebfb !important;
+    }
+    .btn[type="reset"]:hover {
+      background-color: rgb(207, 0, 0) !important;
+      color: #f2ebfb !important;
+    }
+  }
+}
+
+footer {
+  @include footer_style (#9667e0, #f2ebfb, $fuente_encabezados, auto);
+  #social {
+    padding-left: calc(5px + 0.5vw);
+    font-size: calc(15px + 1vw);
+  }
+}
