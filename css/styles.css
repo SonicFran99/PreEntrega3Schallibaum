@@ -199,6 +199,8 @@ main div.card {
   background-color: #ebd9fc;
   color: #9667e0;
   border: #f2ebfb 3px solid; }
+  main div.card #Carly {
+    object-fit: cover; }
   main div.card h5 {
     font-family: "Caveat Brush", cursive;
     font-size: calc(10px + 1vw); }

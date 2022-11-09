@@ -153,6 +153,9 @@ main {
   }
   div.card {
     @include card_style (flex, column nowrap, center, #ebd9fc, #9667e0, #f2ebfb 3px solid);
+    #Carly {
+      object-fit: cover;
+    }
     h5 {
       font-family: $fuente_titulos;
       font-size: calc(10px + 1vw);
