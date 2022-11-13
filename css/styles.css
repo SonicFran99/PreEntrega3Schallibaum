@@ -123,10 +123,11 @@ main {
     border-radius: 5px;
     margin-top: 25px; }
   main #carousel-inner {
-    width: 80%;
+    width: 100%;
     background-color: #d4bbfc;
     color: white;
-    text-shadow: 5px 5px 5px black; }
+    text-shadow: 5px 5px 5px black;
+    margin: auto; }
     main #carousel-inner .carousel-caption {
       font-family: "Caveat Brush", cursive; }
       main #carousel-inner .carousel-caption h5 {
@@ -325,7 +326,7 @@ footer {
       body main #whatsapp #whatsapp-text {
         display: none; }
     body main #carrousel-inner {
-      width: 100%; }
+      width: 80% !important; }
     body main #mobile-description {
       display: flex;
       flex-flow: column nowrap;

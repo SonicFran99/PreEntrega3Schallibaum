@@ -88,7 +88,8 @@ main {
 
   /*Carrusel*/
   #carousel-inner {
-    @include carousel (80%, #d4bbfc, white, 5px 5px 5px black);
+    @include carousel (100%, #d4bbfc, white, 5px 5px 5px black);
+    margin: auto;
     .carousel-caption {
       font-family: $fuente_titulos;
       h5 {
@@ -286,7 +287,7 @@ footer {
       }
 
       #carrousel-inner {
-        width: 100%;
+        width: 80% !important;
       }
       #mobile-description {
         @include estilo_mobile_desc;
