@@ -160,3 +160,10 @@
   background-image: $linear_gradient3;
   box-shadow: 2px 2px 3px black;
 }
+
+@mixin testimonies_mobile {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}

@@ -142,7 +142,7 @@ main {
       }
       p {
         font-family: $fuente_contenido;
-        font-size: large;
+        font-size: x-large;
       }
     }
     #test-text-2 {
@@ -150,10 +150,12 @@ main {
       margin-right: 10px;
       h1 {
         font-family: $fuente_titulos;
+        text-align: end;
       }
       p {
         font-family: $fuente_contenido;
-        font-size: large;
+        font-size: X-large;
+        text-align: end;
       }
     }
     &:hover {
@@ -162,7 +164,7 @@ main {
   }
   #test-button {
     @include estilo_boton (90%, #9667e0, #ebd9fc, #f2ebfb 3px solid);
-    font-size: larger;
+    font-size: x-large;
     &:hover{
       @include link_hover (#d4bbfc, #9667e0);
     }
@@ -251,7 +253,7 @@ footer {
   }
 }
 
-/*Vista mobile*/
+/*Vista tablet*/
 @media only screen and (max-width: 768px) {
   body {
     background-image: $linear_gradient_mobile;
@@ -322,11 +324,13 @@ footer {
         #test-text {
           p {
             font-size: calc(2px + 2.5vh);
+            text-align: justify;
           }
         }
         #test-text-2 {
           p {
             font-size: calc(2px + 2.5vh);
+            text-align: justify;
           }
         }
         .img-fluid {
@@ -337,6 +341,7 @@ footer {
       }
       #test-button {
         width: 100%;
+        font-size: large;
       }
 
       div.row {
@@ -377,6 +382,7 @@ footer {
   }
 }
 
+/*Vista mobile*/
 @media only screen and (max-width: 426px) {
   nav {
     #header {
@@ -394,8 +400,28 @@ footer {
       top: 20% !important;
     }
     #test {
+      flex-direction: column !important;
       .img-fluid {
-        height: 30vh !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin: 10px !important;
+      }
+      #test-text {
+        border-left: none !important;
+        border-top: #ebd9fc 3px solid !important;
+        text-align: start !important;
+        margin-right: 0 !important;
+        font-size: x-large !important;
+      }
+      #test-text-2 {
+        border-right: none !important;
+        border-bottom: #ebd9fc 3px solid !important;
+        text-align: justify !important;
+        margin-left: 0 !important;
+        font-size: x-large !important;
+      }
+      #test-button {
+        font-size: large !important;
       }
     }
     #classes {
